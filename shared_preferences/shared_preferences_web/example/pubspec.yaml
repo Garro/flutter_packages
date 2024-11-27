@@ -8,7 +8,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences_platform_interface: ^2.4.0
+  shared_preferences_platform_interface: 
+    path: ../../shared_preferences_platform_interface
   shared_preferences_web:
     path: ../
   web: ^1.0.0
