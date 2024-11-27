@@ -19,8 +19,7 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher_platform_interface:
-    path: ../url_launcher_platform_interface
+  url_launcher_platform_interface: ^2.3.1
 
 dev_dependencies:
   flutter_test:
