@@ -24,9 +24,9 @@
 
 | Flutter    | Android         | iOS               | macOS             |
 | :--------- | :-------------- | :---------------- | :---------------- |
-| SDK 3.0+   | Android API 21+ | iOS 13+           | macOS 11+         |
-| Dart 2.17+ | Java 8+         | Swift 5.7+        | Swift 5.7+        |
-|            |                 | Xcode 14.x / 15.x | Xcode 14.x / 15.x |
+| SDK 3.0+   | Android API 21+ | iOS 14+           | macOS 11+         |
+| Dart 2.17+ | Java 8+         | Swift 5.9+        | Swift 5.9+        |
+|            |                 | Xcode 15.x / 16.x | Xcode 15.x / 16.x |
 
 ### Installation
 
@@ -61,6 +61,8 @@ Finally, if you made any changes don't forget to scroll to the end and press the
 The callback and logout URLs are the URLs that Auth0 invokes to redirect back to your app. Auth0 invokes the callback URL after authenticating the user, and the logout URL after removing the session cookie.
 
 > 💡 On iOS 17.4+ and macOS 14.4+ it is possible to use Universal Links as callback and logout URLs. When enabled, auth0_flutter will fall back to using a custom URL scheme on older iOS / macOS versions.
+>
+> Whenever possible, Auth0 recommends using Universal Links as a secure way to link directly to content within your iOS app. Custom URL schemes can be subject to [client impersonation attacks](https://datatracker.ietf.org/doc/html/rfc8252#section-8.6).
 >
 > **This feature requires Xcode 15.3+ and a paid Apple Developer account**.
 
@@ -113,6 +115,8 @@ Next, configure the following URLs for your application under the **Application 
 
 > 💡 Make sure to use port `3000` when running your app: `flutter run -d chrome --web-port 3000`.
 
+> 💡 Compile with WASM by running the app: `flutter run -d chrome --web-port 3000 --wasm`.
+
 Take note of the **client ID** and **domain** values under the **Basic Information** section. You'll need these values in the next step.
 
 ### Configure the SDK
@@ -143,7 +147,7 @@ android {
     defaultConfig {
         // ...
         // Add the following line
-        manifestPlaceholders = [auth0Domain: "YOUR_AUTH0_DOMAIN", auth0Scheme: "https"]
+        manifestPlaceholders += [auth0Domain: "YOUR_AUTH0_DOMAIN", auth0Scheme: "https"]
     }
     // ...
 }
@@ -193,6 +197,8 @@ Re-declare the activity manually using `tools:node="remove"` in the `android/src
 > Links](https://auth0.com/docs/get-started/applications/enable-android-app-links-support). You can
 > read more about setting this value in the [Auth0.Android SDK
 > README](https://github.com/auth0/Auth0.Android#a-note-about-app-deep-linking).
+
+> Whenever possible, Auth0 recommends using [Android App Links](https://auth0.com/docs/applications/enable-android-app-links) as a secure way to link directly to content within your app. Custom URL schemes can be subject to [client impersonation attacks](https://datatracker.ietf.org/doc/html/rfc8252#section-8.6).
 
 > 💡 If your Android app is using [product flavors](https://developer.android.com/studio/build/build-variants#product-flavors), you might need to specify different manifest placeholders for each flavor.
 

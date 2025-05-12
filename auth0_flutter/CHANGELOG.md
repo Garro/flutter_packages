@@ -1,5 +1,40 @@
 # Change Log
 
+## [af-v1.10.0](https://github.com/auth0/auth0-flutter/tree/af-v1.10.0) (2025-04-29)
+[Full Changelog](https://github.com/auth0/auth0-flutter/compare/af-v1.9.0...af-v1.10.0)
+
+**Added**
+- implement app state getter for web [\#509](https://github.com/auth0/auth0-flutter/pull/509) ([navaronbracke](https://github.com/navaronbracke))
+- feat(auth): 🔐 Add UserProfile serialization and include in Credentials [\#556](https://github.com/auth0/auth0-flutter/pull/556) ([Rohithgilla12](https://github.com/Rohithgilla12))
+
+**Fixed**
+- Fixed the WASM compilation issue on 3.24 version of flutter [\#547](https://github.com/auth0/auth0-flutter/pull/547) ([pmathew92](https://github.com/pmathew92))
+
+## [af-v1.9.0](https://github.com/auth0/auth0-flutter/tree/af-v1.9.0) (2025-03-05)
+[Full Changelog](https://github.com/auth0/auth0-flutter/compare/af-v1.8.0...af-v1.9.0)
+
+**Added**
+- Added support for WASM compilation [\#516](https://github.com/auth0/auth0-flutter/pull/516) ([pmathew92](https://github.com/pmathew92))
+- af: Ignore locale when it's not a string [\#518](https://github.com/auth0/auth0-flutter/pull/518) ([Widcket](https://github.com/Widcket))
+
+**Updated**
+- Updated Flutter version to 3.24.0 ([pmathew92](https://github.com/pmathew92))
+- Updated Dart sdk version to 3.5.0 ([pmathew92](https://github.com/pmathew92))
+
+## [af-v1.8.0](https://github.com/auth0/auth0-flutter/tree/af-v1.8.0) (2025-02-13)
+[Full Changelog](https://github.com/auth0/auth0-flutter/compare/af-v1.7.2...af-v1.8.0)
+
+**Added**
+- feat: Added support for passwordless authentication [\#503](https://github.com/auth0/auth0-flutter/pull/503) ([pmathew92](https://github.com/pmathew92))
+- build(deps): bump actions/download-artifact from 4.1.7 to 4.1.8 [\#499](https://github.com/auth0/auth0-flutter/pull/499) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+**Changed**
+- Updated the android gradle version [\#490](https://github.com/auth0/auth0-flutter/pull/490) ([pmathew92](https://github.com/pmathew92))
+- Update Swift dependencies [\#493](https://github.com/auth0/auth0-flutter/pull/493) ([Widcket](https://github.com/Widcket))
+- Minor readme update [\#483](https://github.com/auth0/auth0-flutter/pull/483) ([pmathew92](https://github.com/pmathew92))
+- Set `compileSdk` to `34` to match Auth0.Android [\#494](https://github.com/auth0/auth0-flutter/pull/494) ([Widcket](https://github.com/Widcket))
+- Use java.time.Instant instead of java.text.SimpleDateFormat [\#469](https://github.com/auth0/auth0-flutter/pull/469) ([gferon](https://github.com/gferon))
+
 ## [af-v1.7.2](https://github.com/auth0/auth0-flutter/tree/af-v1.7.2) (2024-05-09)
 [Full Changelog](https://github.com/auth0/auth0-flutter/compare/af-v1.7.1...af-v1.7.2)
 
