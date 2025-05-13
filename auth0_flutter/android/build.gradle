@@ -81,9 +81,10 @@ dependencies {
     testImplementation 'com.jayway.awaitility:awaitility:1.7.0'
     testImplementation 'org.robolectric:robolectric:4.6.1'
     testImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
-    testImplementation 'com.auth0:java-jwt:3.19.1'
+    testImplementation 'com.auth0:java-jwt:3.19.3'
 
      constraints {
+        implementation 'com.fasterxml.jackson.core:jackson-core:2.15.4'
         implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.4'
     }
 }
